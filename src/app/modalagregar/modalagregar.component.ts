@@ -30,7 +30,7 @@ export class ModalAgregarComponent {
       })
       .catch(error => {
         console.error(error);
-        // Manejar errores aquí
+        // Manejar los errores aquí
         alert('Error al agregar inspección');
       });
       this.closeModal.emit();
