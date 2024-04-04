@@ -1,0 +1,300 @@
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: auto;
+  /* Transparencia */
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.tituloA {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 10px;
+  background: rgb(0, 7, 208);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 7, 208, 1) 0%,
+    rgba(2, 6, 42, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  color: white;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  margin-bottom: 5px;
+}
+
+.input-wrapper input {
+  border: 2px solid #ccc; /* Borde del input */
+  border-radius: 8px; /* Borde redondeado */
+  padding: 10px; /* Espacio interno */
+  font-size: 16px; /* Tamaño del texto */
+  width: 150px; /* Ancho completo */
+  transition: border-color 0.3s ease; /* Efecto de transición */
+}
+
+.input-wrapper input:focus {
+  border-color: dodgerblue; /* Cambia el color del borde al enfocar el input */
+}
+
+.container {
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #000000; /* Borde */
+  border-radius: 5px; /* Borde redondeado */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 20px;
+  margin-top: 50px; /* Espaciado inferior */
+  display: grid; /* Uso de CSS Grid */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  grid-column-gap: 20px; 
+  
+  position: relative;
+  padding: 60px;
+}
+
+.border-text {
+  position: absolute; /* Establecer posición absoluta */
+  top: -20px; /* Mover el texto hacia arriba */
+  left: 10px; /* Ajustar la posición lateral */
+  background-color: white; /* Fondo blanco detrás del texto */
+  padding: 0 5px; /* Espaciado interno */
+  font-weight: bold; ; /* Espaciado inferior */
+}
+
+.container-single-column {
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr; /* Cambia a una sola columna */
+  grid-column-gap: 20px;
+  position: relative;
+  
+}
+
+.container-two-columns {
+  
+  /* padding: 10px; */
+  margin-bottom: 20px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas */
+  grid-column-gap: 20px;
+  position: relative;
+  /* padding: 60px; */
+}
+
+.card {
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr; /* Cambia a una sola columna */
+  grid-column-gap: 20px;
+  position: relative;
+  
+}
+
+.two-column-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Columna 1 ocupa el doble de ancho que la Columna 2 */
+   /* Espacio entre las columnas */
+}
+
+.column1 {
+  /* Color de fondo de la columna 1 */
+ padding-left: 5px; /* Espaciado interno */
+}
+
+.column2 {
+  /* Color de fondo de la columna 2 */
+ padding-left: 5px; /* Espaciado interno */
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+}
+
+.p {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  
+}
+
+/* Estilos para el contenedor del input de radio */
+.radio-containerB {
+  border: 1px solid #000000; /* Agrega un borde alrededor del contenedor */
+  display: inline-block; /* Para que el contenedor se ajuste al contenido */
+  padding: 0px;
+  width: 50px; /* Ancho del contenedor igual al ancho del input */
+  height: 50px;
+  border-radius: 50px; /* Espaciado interno */
+}
+
+/* Estilos para el contenedor del icono */
+.radio-wrapperB {
+  position: relative; /* Para posicionar correctamente el icono */
+}
+
+/* Estilos para el icono personalizado */
+.radio-wrapperB .custom-radio-labelB {
+  position: absolute; /* Posiciona el icono encima del input */
+  top: 0;
+  left: 0;
+  width: 50px; /* Ancho del icono */
+  height: 50px; /* Altura del icono */
+   /* URL de tu icono PNG */
+  background-size: cover; /* Ajusta el tamaño del icono */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+}
+
+/* Ocultar el input de tipo radio */
+.radio-wrapperB input[type="radio"] {
+  position: absolute;
+  opacity: 0; /* Hace el input invisible */
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para el icono cuando está marcado */
+.radio-wrapperB input[type="radio"]:checked + .custom-radio-labelB {
+  background-image: url("../../../assets/checked.png"); /* URL de tu icono marcado PNG */
+}
+
+.radio-containerM {
+  border: 1px solid #000000; /* Agrega un borde alrededor del contenedor */
+  display: inline-block; /* Para que el contenedor se ajuste al contenido */
+  padding: 0px;
+  width: 50px; /* Ancho del contenedor igual al ancho del input */
+  height: 50px;
+  border-radius: 50px; /* Espaciado interno */
+}
+
+/* Estilos para el contenedor del icono */
+.radio-wrapperM {
+  position: relative; /* Para posicionar correctamente el icono */
+}
+
+/* Estilos para el icono personalizado */
+.radio-wrapperM .custom-radio-labelM {
+  position: absolute; /* Posiciona el icono encima del input */
+  top: 0;
+  left: 0;
+  width: 50px; /* Ancho del icono */
+  height: 50px; /* Altura del icono */
+   /* URL de tu icono PNG */
+  background-size: cover; /* Ajusta el tamaño del icono */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+}
+
+/* Ocultar el input de tipo radio */
+.radio-wrapperM input[type="radio"] {
+  position: absolute;
+  opacity: 0; /* Hace el input invisible */
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para el icono cuando está marcado */
+.radio-wrapperM input[type="radio"]:checked + .custom-radio-labelM {
+  background-image: url("../../../assets/cancel.png"); /* URL de tu icono marcado PNG */
+}
+
+.input-wrapperk {
+  padding-left: 50px;
+  margin-top: 50px;
+}
+
+.input-wrapperk label {
+  margin-right: 10px;
+}
+
+.input-wrapperk input {
+  border: 2px solid #ccc; /* Borde del input */
+  border-radius: 8px; /* Borde redondeado */
+  padding: 10px; /* Espacio interno */
+  font-size: 16px; /* Tamaño del texto */
+  width: 150px; /* Ancho completo */
+  transition: border-color 0.3s ease; /* Efecto de transición */
+}
+
+.input-wrapperk input:focus {
+  border-color: dodgerblue; /* Cambia el color del borde al enfocar el input */
+}
+
+/* Estilos para los botones */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para los botones */
+.btn-submit,
+.btn-clear,
+.btn-close {
+  background-color: rgb(70, 214, 70);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px; /* Espacio entre los botones */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-clear {
+  background-color: rgb(210, 205, 36);
+}
+
+.btn-close {
+  background-color: rgb(213, 30, 30);
+}
+
+.btn-submit:hover,
+.btn-clear:hover,
+.btn-close:hover {
+  background-color: #3faa3f; /* Color de fondo hover para el botón submit */
+}
+
+.btn-clear:hover {
+  background-color: #d2cd24; /* Color de fondo hover para el botón clear */
+}
+
+.btn-close:hover {
+  background-color: #d51e1e; /* Color de fondo hover para el botón close */
+}
+
+/* Estilos para el contenedor de los botones */
+.button-container {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.h4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}

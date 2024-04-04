@@ -1,0 +1,116 @@
+<div *ngIf="isOpen" class="modal-overlay">
+  <div class="modal">
+    <h2 class="tituloA">Actualizar Inspección</h2>
+    <form (ngSubmit)="onSubmit()" #inspeccionForm="ngForm">
+      <div class="input-wrapper">
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="fecha" [(ngModel)]="formData.fecha" required />
+      </div>
+      <div class="container">
+        <div class="border-text">Datos básicos del conductor</div>
+        <div class="input-wrapper">
+          <label for="nombrec">Nombre</label>
+          <input type="text" id="nombrec" name="nombrec" [(ngModel)]="formData.nombrec" required />
+        </div>
+        <div class="input-wrapper">
+          <label for="apellidoc">Apellido</label>
+          <input type="text" id="apellidoc" name="apellidoc" [(ngModel)]="formData.apellidoc" required />
+        </div>
+        <div class="input-wrapper">
+          <label for="edad">Edad</label>
+          <input type="text" id="edad" name="edad" [(ngModel)]="formData.edad" required />
+        </div>
+      </div>
+      <div class="container">
+        <div class="border-text">Datos del vehículo</div>
+        <div class="input-wrapper">
+          <label for="nombrev">Nombre</label>
+          <input type="text" id="nombrev" name="nombrev" [(ngModel)]="formData.nombrev" required />
+        </div>
+        <div class="input-wrapper">
+          <label for="placav">Placa</label>
+          <input type="text" id="placav" name="placav" [(ngModel)]="formData.placav" required />
+        </div>
+        <div class="input-wrapper">
+          <label for="marcav">Marca</label>
+          <input type="text" id="marcav" name="marcav" [(ngModel)]="formData.marcav" required />
+        </div>
+      </div>
+      <div>
+        <p>¿El vehículo es propio o arrendado?*</p>
+        <div>
+          <input type="radio" id="propio" name="propietario" value="Propio" [(ngModel)]="formData.propietario" required />
+          <label for="propio">Propio</label>
+        </div>
+        <div>
+          <input type="radio" id="arrendado" name="propietario" value="Arrendado" [(ngModel)]="formData.propietario" required />
+          <label for="arrendado">Arrendado</label>
+        </div>
+      </div>
+      <div class="container-single-column">
+        <div class="border-text">Realizar Inspección</div>
+        <div class="input-wrapperk">
+          <label for="kilometraje">Kilometraje *:</label>
+          <input type="text" id="kilometraje" name="kilometraje" [(ngModel)]="formData.kilometraje" required />
+          <label for="kilometraje"> KM</label>
+        </div>
+        <h4 class="h4">Elementos a Inspeccionar</h4>
+        <div class="container-two-columns">
+          <div class="card">
+            <h4>Direccionales</h4>
+            <div>
+              <div class="two-column-container">
+                <div class="column1">
+                  <h4>•Direccionales Delanteras</h4>
+                </div>
+                <div class="column2">
+                  <div>
+                    <h4 class="p">Buenas</h4>
+                    <div class="radio-containerB">
+                      <div class="radio-wrapperB">
+                        <input type="radio" id="buenasD" name="direccionalesd" value="Buenas" [(ngModel)]="formData.direccionalesd" required />
+                        <label for="buenasD" class="custom-radio-labelB"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="p">Malas</h4>
+                    <div class="radio-containerM">
+                      <div class="radio-wrapperM">
+                        <input type="radio" id="malasD" name="direccionalesd" value="Malas" [(ngModel)]="formData.direccionalesd" required />
+                        <label for="malasD" class="custom-radio-labelM"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="two-column-container">
+                <div class="column1">
+                  <h4>•Direccionales Traseras</h4>
+                </div>
+                <div class="column2">
+                  <div class="radio-containerB">
+                    <div class="radio-wrapperB">
+                      <input type="radio" id="buenasT" name="direccionalest" value="Buenas" [(ngModel)]="formData.direccionalest" required />
+                      <label for="buenasT" class="custom-radio-labelB"></label>
+                    </div>
+                  </div>
+                  <div class="radio-containerM">
+                    <div class="radio-wrapperM">
+                      <input type="radio" id="malasT" name="direccionalest" value="Malas"  [(ngModel)]="formData.direccionalest" required />
+                      <label for="malasT" class="custom-radio-labelM"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button type="submit" class="btn btn-submit">Actualizar</button>
+        <button type="button" class="btn btn-close" (click)="close()">Cerrar</button>
+      </div>
+    </form>
+  </div>
+</div>

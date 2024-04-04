@@ -1,0 +1,69 @@
+.title {
+    font-weight: bold; /* Texto en negrita */
+    
+    margin: 10px; /* Espaciado inferior */
+  }
+  
+  .help{
+    position: relative;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tituloA {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 10px;
+    background: rgb(0, 7, 208);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 7, 208, 1) 0%,
+      rgba(2, 6, 42, 1) 50%,
+      rgba(255, 0, 0, 1) 100%
+    );
+    color: white;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para los botones */
+  .btn-submit,
+  .btn-clear,
+  .btn-close {
+    background-color: rgb(70, 214, 70);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px; /* Espacio entre los botones */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-clear {
+    background-color: rgb(210, 205, 36);
+  }
+  
+  .btn-close {
+    background-color: rgb(213, 30, 30);
+  }
+  
+  .btn-submit:hover,
+  .btn-clear:hover,
+  .btn-close:hover {
+    background-color: #3faa3f; /* Color de fondo hover para el botón submit */
+  }
+  
+  .btn-clear:hover {
+    background-color: #d2cd24; /* Color de fondo hover para el botón clear */
+  }
+  
+  .btn-close:hover {
+    background-color: #d51e1e; /* Color de fondo hover para el botón close */
+  }

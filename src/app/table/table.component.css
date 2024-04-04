@@ -1,0 +1,52 @@
+.icon-buttonA,
+.icon-buttonB {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 20px; /* Ajusta el tamaño del botón según sea necesario */
+  height: 20px; /* Ajusta el tamaño del botón según sea necesario */
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+}
+
+.icon-buttonA {
+  background-image: url(../../../assets/update.png); /* Ruta de la imagen de actualización */
+}
+
+.icon-buttonB {
+  background-image: url(../../../assets/Borrar.png); /* Ruta de la imagen de borrado */
+}
+
+.botones {
+  display: flex;
+}
+
+
+.table-container {
+  max-width: 800px;
+  margin-top: 20px;
+  margin-left: 10px
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}

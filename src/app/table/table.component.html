@@ -1,0 +1,45 @@
+<div class="table-container"></div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Nombre Conductor</th>
+      <th>Apellido Conductor</th>
+      <th>Edad</th>
+      <th>Nombre Vehículo</th>
+      <th>Placa Vehículo</th>
+      <th>Marca Vehículo</th>
+      <th>Propietario</th>
+      <th>Kilometraje</th>
+      <th>Direccionales Delanteras</th>
+      <th>Direccionales Traseras</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let inspeccion of data">
+      <td>{{ inspeccion.fecha }}</td>
+      <td>{{ inspeccion.nombrec }}</td>
+      <td>{{ inspeccion.apellidoc }}</td>
+      <td>{{ inspeccion.edad }}</td>
+      <td>{{ inspeccion.nombrev }}</td>
+      <td>{{ inspeccion.placav }}</td>
+      <td>{{ inspeccion.marcav }}</td>
+      <td>{{ inspeccion.propietario }}</td>
+      <td>{{ inspeccion.kilometraje }}</td>
+      <td>{{ inspeccion.direccionalesd }}</td>
+      <td>{{ inspeccion.direccionalest }}</td>
+      <td>
+        <div class="botones">
+          <button class="icon-buttonA" (click)="handleActualizarClick(inspeccion)">
+            
+          </button>
+          <button class="icon-buttonB" (click)="deleteItem(inspeccion.IdInspeccionVehiculo)">
+            
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-modalactualizar *ngIf="isModalOpen" [rowData]="selectedRow"  (closeModal)="closeModal()" ></app-modalactualizar>
